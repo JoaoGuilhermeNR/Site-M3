@@ -21,6 +21,16 @@
     padding: 10px;
     opacity: 65;
     transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+    
+}
+
+.menu.open {
+  transform: translateY(0%);
+}
+
+.menu.close {
+  transform: translateY(-100%);
 }
 
 @media screen and (max-width: 768px) {
@@ -55,7 +65,7 @@
 
 
 #menu.scrolled {
-    background-color: #f8f7f7; /* Cor do fundo quando o menu está rolado */
+    background-color: #fcfcfc; /* Cor do fundo quando o menu está rolado */
     color: #050505;
 }
 
@@ -137,25 +147,34 @@ a:hover {
     margin-top: 25px;
     font-size: 30px;
   }
+  h3{
+  margin-top: 0;
+  margin-bottom: 15px;
+  }
   
   /* Formulário de contato */
   
   .contact-form {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 40px;
-    
-  }
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form input[type="tel"],
-  .contact-form input[type="submit"] {
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="submit"],
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
   }
   
   .contact-form input[type="submit"] {

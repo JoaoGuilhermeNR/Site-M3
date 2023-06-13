@@ -109,7 +109,7 @@ a:hover {
 
 .card {
     size: 25%;
-    background-color: #f1f1f1;
+    background-color: #f1f1f1b6;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -131,7 +131,7 @@ a:hover {
 
   .card p {
     font-size: 16px;
-    color: #555;
+    color: #555555de;
   }
 
   .grid-container {
@@ -148,28 +148,20 @@ a:hover {
     font-size: 30px;
   }
   h3{
-  margin-top: 0;
-  margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
   }
-  
   /* Formulário de contato */
   
-  .contact-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form input[type="submit"],
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form input[type="tel"],
+  .contact-form input[type="submit"],
+  .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
@@ -188,5 +180,49 @@ a:hover {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+      
     }
+  
+  }
+
+
+  .pai{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content:space-around;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  .pai_h1{
+    font-size: 10px;
+    max-width: 500px;
+  }
+
+
+  .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .img_contact{
+    width: 20px;
+    align-items: center;
+  }
+
+  .p_contact{
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .description_dados{
+    margin-top: 10px;
+  }
+
+  .h3_dados{
+    font-size: 30px;
   }

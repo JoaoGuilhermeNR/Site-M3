@@ -1,28 +1,26 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .menu {
-    position: fixed;
-    background-color: black;
-    background: rgba(17, 17, 17, 0.35);
-    backdrop-filter: blur(7px);
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 80px;
-    padding: 10px;
-    opacity: 65;
-    transition: background-color 0.3s ease;
-    transition: transform 0.3s ease;
-    
+  position: fixed;
+  background-color: black;
+  background: rgba(17, 17, 17, 0.35);
+  backdrop-filter: blur(7px);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  opacity: 65;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .menu.open {
@@ -34,130 +32,129 @@
 }
 
 @media screen and (max-width: 768px) {
-    /* Estilos para telas com largura máxima de 768 pixels */
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .menu ul li {
-        margin-bottom: 10px;
-    }
-
-    #logo {
-        display: none;
-    }
-}
-
-#menu_img {
-    background-image: url('https://img.freepik.com/vetores-gratis/banner-site-abstrato-com-formas-modernas_1361-1738.jpg?w=2000');
-    background-size: cover;
-    background-position: center center;
-    height: 80vh;
-    min-width: 300px;
-}
-
-
-#menu.scrolled {
-    background-color: #fcfcfc; /* Cor do fundo quando o menu está rolado */
-    color: #050505;
-}
-
-#menu.scrolled a {
-    color: #050505;
-}
-
-.menu ul {
-    display: flex;
+  /* Estilos para telas com largura máxima de 768 pixels */
+  .menu {
+    flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    list-style-type: none;
-}
-
-.menu ul li {
-    width: 100px;
-    padding: 0px 10px;
-    line-height: 25px;
-    padding: 0;
-    text-transform: none;
-    text-decoration: none;
-}
-
-.menu a {
-    padding: 12.5px;
-    /* display: block; */
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-#img-logo {
-    width: 100px;
-}  
-
-a:hover {
-    color: rgb(218, 218, 218);
-    border-bottom: 1px outset;
-    border-color: rgb(231, 228, 228);
-}
-
-.card {
-    size: 25%;
-    background-color: #f1f1f1b6;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin-left: 20%;
-    margin-right: 20% ;
-
+    height: auto;
   }
 
-  .card img {
-    width: 100%;
-    border-radius: 0px;
-    margin-bottom: 0px;
+  .menu ul {
+    flex-direction: column;
+    margin-top: 10px;
   }
 
-  .card h3 {
-    max-width: 500px;
+  .menu ul li {
     margin-bottom: 10px;
   }
 
-  .card p {
-    font-size: 16px;
-    color: #555555de;
+  #logo {
+    display: none;
   }
+}
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto ;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 30px;
-  }
-  h3{
-    margin-top: 25px;
-    margin-bottom: 15px;
-  }
-  /* Formulário de contato */
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form input[type="tel"],
-  .contact-form input[type="submit"],
-  .contact-form textarea {
+#menu_img {
+  background-image: url('https://img.freepik.com/vetores-gratis/banner-site-abstrato-com-formas-modernas_1361-1738.jpg?w=2000');
+  background-size: cover;
+  background-position: center center;
+  height: 80vh;
+  min-width: 300px;
+}
+
+#menu.scrolled {
+  background-color: #fcfcfc; /* Cor do fundo quando o menu está rolado */
+  color: #050505;
+}
+
+#menu.scrolled a {
+  color: #050505;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.menu ul li {
+  width: 100px;
+  padding: 0;
+  line-height: 25px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.menu a {
+  padding: 12.5px;
+  /* display: block; */
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+#img-logo {
+  width: 100px;
+}
+
+a:hover {
+  color: rgb(218, 218, 218);
+  border-bottom: 1px outset;
+  border-color: rgb(231, 228, 228);
+}
+
+.card {
+  size: 25%;
+  background-color: #f1f1f1b6;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.card h3 {
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555555de;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 30px;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* Formulário de contato */
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="submit"],
+.contact-form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -165,64 +162,59 @@ a:hover {
 }
 
 .contact-form textarea {
-    height: 100px;
-    resize: vertical;
-  }
-  
-  .contact-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-      
-    }
-  
-  }
+  height: 100px;
+  resize: vertical;
+}
 
+.contact-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
 
-  .pai{
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
-    justify-content:space-around;
-    gap: 30px;
-    margin-top: 30px;
-    margin-bottom: 100px;
+@media screen and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
+}
 
-  .pai_h1{
-    font-size: 10px;
-    max-width: 500px;
-  }
+.pai {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
 
+.pai_h1 {
+  font-size: 10px;
+  max-width: 500px;
+}
 
-  .contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 20px;
-  }
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-  .img_contact{
-    width: 20px;
-    align-items: center;
-  }
+.img_contact {
+  width: 20px;
+  align-items: center;
+}
 
-  .p_contact{
-    margin-bottom: 10px;
-    margin-top: 20px;
-  }
+.p_contact {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
 
-  .description_dados{
-    margin-top: 10px;
-  }
+.description_dados {
+  margin-top: 10px;
+}
 
-  .h3_dados{
-    font-size: 30px;
-  }
+.h3_dados {
+  font-size: 30px;
+}

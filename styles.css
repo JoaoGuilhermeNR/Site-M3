@@ -190,13 +190,3 @@ a:hover {
         gap: 20px;
     }
   }
-  .pai{
-    display: flex;
-    justify-content: center;
-    gap: 300px;
-  }
-
-  .pai_h1{
-    font-size: 10px;
-    max-width: 500px;
-  }

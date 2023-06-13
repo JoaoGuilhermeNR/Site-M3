@@ -125,7 +125,7 @@ a:hover {
   }
 
   .card h3 {
-    font-size: 150%;
+    max-width: 500px;
     margin-bottom: 10px;
   }
 
@@ -183,7 +183,7 @@ a:hover {
     cursor: pointer;
   }
   
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;

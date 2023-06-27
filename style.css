@@ -33,7 +33,7 @@
 {
     color: pink;
     font-size: 25px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .content {
@@ -63,12 +63,7 @@ header {
     font-size: 2em;
     color: pink;
     user-select: none;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    display: none;
-  }
+    align-items: center;
 }
 
 .navigation a {
@@ -298,7 +293,7 @@ header {
     justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
-}
+    }
 
 .botao-box .botao {
     position: relative;
@@ -379,66 +374,74 @@ header {
 }
 
 .redes a::before {
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: palevioletred;
-    z-index: -1;
-    transition: .5s;
+content:'';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: palevioletred;
+z-index: -1;
+transition: .5s;
 }
 
 .redes a:hover::before{
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 20px;
+header.scrolled {
+    background-color: #fcfcfc; /* Cor do fundo quando o menu está rolado */
+    color: #050505;
+    margin: auto;
+}
+
+header.scrolled a {
+    color: #050505;
+}
+
+
+@media screen and (max-width: 768px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .content{
+        flex-direction: column;
     }
 
     .logo {
-        font-size: 1.5em;
+        display: none;
     }
 
-    .navigation a {
-        font-size: 1em;
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
     }
 
-    .navigation .btnLogin-popup {
-        font-size: 1em;
+    .Eu {
+        display: flex;
+        flex-direction: column;
     }
 
-    .wrapper {
-        width: 90%;
+    .botao-box {
+        display: flex;
+        flex-direction: column;
     }
-
-    .input-box input {
-        font-size: 0.9em;
+   
+    /* h1{
+        font-size: 20px;
     }
+    h2{
+        font: 20px;
+    } */
 
-    .remember-forgot {
-        font-size: 0.8em;
-    }
-
-    .btn {
-        height: 40px;
-        font-size: 0.9em;
-    }
-
-    .login-register {
-        font-size: 0.8em;
-    }
-
-    .botao-box .botao {
-        font-size: 1.2em;
-    }
-
-    .redes a {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
+    .redes{
+        margin-top: 100px;
     }
 }

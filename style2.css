@@ -24,8 +24,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     text-align: justify;
     margin-left: 10%;
-    margin-right: 10%;
-    background-position: center center;
+    margin-right: 10% 
 }
 
   .card h3 {
@@ -40,7 +39,7 @@
 
   .card p {
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
     color: #555;
     margin: 25px;
   }
@@ -126,3 +125,26 @@ transition: .5s;
   background-color: rgb(250, 209, 216);
   padding: 10px;
  }
+
+
+ @media (max-width: 768px) {
+
+  /* title{
+    font-size: 20px;
+  } */
+
+  .contat  {
+    grid-template-columns: 1fr; /* uma coluna em telas menores */
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .grid-container{
+    grid-template-columns: 1fr; /* uma coluna em telas menores */
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+}

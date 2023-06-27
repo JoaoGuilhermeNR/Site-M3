@@ -40,4 +40,38 @@ navigationLinks.forEach(link => {
 });
 // Adiciona o evento de clique aos links de navegação
 
-content
+/* menu na rolagem */
+window.addEventListener('scroll', function() {
+    var menu = document.querySelector('header');
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+    if (scrollTop > 0) {
+      menu.classList.add('scrolled');
+    } else {
+      menu.classList.remove('scrolled');
+    }
+  });
+
+  function smoothScroll(target) {
+    const element = document.querySelector(target);
+    window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth'
+    });
+}
+
+const menuLinks = document.querySelectorAll('header a');
+const menu = document.querySelector('.content');
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const target = this.getAttribute('href');
+        smoothScroll(target);
+        menu.classList.remove('open');
+    });
+});
+
+menu.addEventListener('click', function() {
+    menu.classList.toggle('open');
+});

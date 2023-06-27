@@ -63,3 +63,65 @@
     border-radius: 5px;
     /* border-top: 5px solid pink; */
  }
+
+ .contat{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  padding: 30px;
+  background: pink;
+ }
+
+
+ .contat_redes {
+  /* position: absolute; */
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  
+}
+
+.contat_redes a{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgb(20, 20, 20);
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.contat_redes a::before {
+content:'';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background-color: rgb(250, 209, 216);
+z-index: -1;
+transition: .5s;
+}
+
+.contat_redes a:hover::before{
+  width: 100%;
+}
+
+ footer{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(250, 209, 216);
+  padding: 10px;
+ }

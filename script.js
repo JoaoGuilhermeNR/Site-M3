@@ -34,8 +34,10 @@ function scrollToAnchor(event) {
 }
 
 // Adiciona o evento de clique aos links de navegação
-const navigationLinks = document.querySelectorAll(".navigation a");
+let navigationLinks = document.querySelectorAll(".navigation a");
 navigationLinks.forEach(link => {
     link.addEventListener("click", scrollToAnchor);
 });
+// Adiciona o evento de clique aos links de navegação
 
+content

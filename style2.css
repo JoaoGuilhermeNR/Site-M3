@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url('servicos.jpg'); */
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10% 
+}
+
+  .card h3 {
+    font-size: 1.1em;
+    color: pink;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-top: 5px solid pink;
+  }
+
+  .card p {
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+    margin: 25px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 30px;
+  }
+
+ h2{
+  font-size: 1.1em;
+    color: pink;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    /* border-top: 5px solid pink; */
+ }

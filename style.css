@@ -434,14 +434,13 @@ header.scrolled a {
         flex-direction: column;
     }
    
-    /* h1{
-        font-size: 20px;
+  
     }
     h2{
         font: 20px;
-    } */
+        padding: 50px;
+    } 
 
     .redes{
         margin-top: 100px;
     }
-}

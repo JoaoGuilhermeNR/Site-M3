@@ -1,435 +1,392 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .Eu {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 8%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 8%;
 }
 
 .Eu h3 {
-  color: whitesmoke;
-  letter-spacing: 2px;
-  font-size: 20px;
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 
 .Eu h1 {
-  color: pink;
-  margin: 0px 0px 20px;
-  font-size: 70px;
+    color: pink;
+    margin: 0px 0px 20px;
+    font-size: 70px;
 }
 
 .Eu h2 {
-  color: pink;
-  font-size: 25px;
-  margin-top: 20px;
+    color: pink;
+    font-size: 25px;
+    margin-top: 20px;
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url('background.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-bottom: 5px solid pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid pink;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo com transparência */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+header.scrolled {
+    padding: 10px 100px; /* Diminuir o espaçamento do header quando rolado */
 }
 
 .logo {
-  font-size: 2em;
-  color: pink;
-  user-select: none;
+    font-size: 2em;
+    color: pink;
+    user-select: none;
 }
 
 .navigation a {
-  position: relative;
-  font-size: 1.1em;
-  color: pink;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 40px;
+    position: relative;
+    font-size: 1.1em;
+    color: pink;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
 }
 
 .navigation a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 3px;
-  background: pink;
-  border-radius: 5px;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform .5s;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: pink;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
 }
 
 .navigation a:hover::after {
-  transform-origin: left;
-  transform: scaleX(1);
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
 .navigation .btnLogin-popup {
-  width: 130px;
-  height: 50px;
-  background: transparent;
-  border: 2px solid pink;
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1.1em;
-  color: pink;
-  font-weight: 500;
-  margin-left: 40px;
-  transition: .5s;
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid pink;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: pink;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
 }
 
 .navigation .btnLogin-popup:hover {
-  background: pink;
-  color: #162938;
+    background: pink;
+    color: #162938;
 }
 
 .wrapper {
-  position: relative;
-  width: 400px;
-  height: 440px;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, .5);
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transform: scale(0);
-  transition: transform .5s ease, height .2s ease;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease, height 0.2s ease;
 }
 
 .wrapper.active-popup {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 .wrapper.active {
-  height: 520px;
+    height: 520px;
 }
 
 .wrapper .form-box {
-  width: 100%;
-  padding: 40px;
+    width: 100%;
+    padding: 40px;
 }
 
 .wrapper .form-box.login {
-  transition: transform .18s ease;
-  transform: translateX(0);
+    transition: transform 0.18s ease;
+    transform: translateX(0);
 }
 
 .wrapper.active .form-box.login {
-  transition: none;
-  transform: translateX(-400px);
+    transition: none;
+    transform: translateX(-400px);
 }
 
 .wrapper .form-box.register {
-  position: absolute;
-  transition: none;
-  transform: translateX(400px);
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
 }
 
 .wrapper.active .form-box.register {
-  transition: transform .18s ease;
-  transform: translateX(0);
+    transition: transform 0.18s ease;
+    transform: translateX(0);
 }
 
 .wrapper .icon-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45px;
-  height: 45px;
-  background: #fff;
-  font-size: 2em;
-  color: pink;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom-left-radius: 20px;
-  cursor: pointer;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    font-size: 2em;
+    color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .form-box h2 {
-  font-size: 2em;
-  color: pink;
-  text-align: center;
+    font-size: 2em;
+    color: pink;
+    text-align: center;
 }
 
 .input-box {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  border-bottom: 2px solid pink;
-  margin: 30px 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid pink;
+    margin: 30px 0;
 }
 
 .input-box label {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  font-size: 1em;
-  color: pink;
-  font-weight: 500;
-  pointer-events: none;
-  transition: .5s;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: pink;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
 }
 
 .input-box input:focus~label,
 .input-box input:valid~label {
-  top: -5px;
+    top: -5px;
 }
 
 .input-box input {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  color: pink;
-  font-weight: 600;
-  padding: 0 35px 0 5px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: pink;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
 }
 
 .input-box .icon {
-  position: absolute;
-  right: 8px;
-  font-size: 1.2em;
-  color: pink;
-  line-height: 57px;
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: pink;
+    line-height: 57px;
 }
 
 .remember-forgot {
-  font-size: .9em;
-  color: pink;
-  font-weight: 500;
-  margin: -15px 0 15px;
-  display: flex;
-  justify-content: space-between;
+    font-size: 0.9em;
+    color: pink;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .remember-forgot label input {
-  accent-color: pink;
-  margin-right: 3px;
+    accent-color: pink;
+    margin-right: 3px;
 }
 
 .remember-forgot a {
-  color: pink;
-  text-decoration: none;
+    color: pink;
+    text-decoration: none;
 }
 
 .remember-forgot a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .btn {
-  width: 100%;
-  height: 45px;
-  background: pink;
-  border: none;
-  outline: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
-  color: #fff;
-  font-weight: 500;
+    width: 100%;
+    height: 45px;
+    background: pink;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
 }
 
 .login-register {
-  font-size: .9em;
-  color: pink;
-  text-align: center;
-  font-weight: 500;
-  margin: 25px 0 10px;
+    font-size: 0.9em;
+    color: pink;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
 }
 
 .login-register p a {
-  color: pink;
-  text-decoration: none;
-  font-weight: 600;
+    color: pink;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .login-register p a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .botao-box {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 34.5rem;
-  height: 5rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
 }
 
 .botao-box .botao {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: pink;
-  font-size: 1.6rem;
-  font-weight: 600;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  transition: color 0.4s ease-in;
-  z-index: 10;
-}
-
-.botao-box .botao:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: pink;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  z-index: -1;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 17rem;
+    height: 60%;
+    background: transparent;
+    border: 0.2rem solid pink;
+    border-radius: 0.8rem;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    color: pink;
 }
 
 .botao-box .botao:hover {
-  color: #162938;
+    color: palevioletred;
 }
 
-.botao-box .botao:hover:after {
-  transform-origin: left;
-  transform: scaleX(1);
+.botao-box .botao:nth-child(2) {
+    background: transparent;
+    color: pink;
 }
 
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .3s, visibility .3s;
+.botao-box .botao:nth-child(2):hover {
+    color: palevioletred;
 }
 
-.popup.active {
-  opacity: 1;
-  visibility: visible;
+.botao-box .botao:nth-child(2)::before {
+    background: pink;
 }
 
-.popup .content-popup {
-  position: relative;
-  width: 800px;
-  height: 600px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.botao-box .botao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: pink;
+    z-index: -1;
+    transition: 0.5s;
 }
 
-.popup .close-popup {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  cursor: pointer;
+.botao-box .botao:hover::before {
+    width: 100%;
 }
 
-.popup .close-popup::before,
-.popup .close-popup::after {
-  content: '';
-  position: absolute;
-  top: 13px;
-  width: 14px;
-  height: 2px;
-  background: pink;
+.redes {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.popup .close-popup::before {
-  transform: rotate(45deg);
+.redes a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid pink;
+    border-radius: 50%;
+    font-size: 20px;
+    color: pink;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.popup .close-popup::after {
-  transform: rotate(-45deg);
+.redes a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: palevioletred;
+    z-index: -1;
+    transition: 0.5s;
 }
 
-.popup .title-popup {
-  font-size: 2em;
-  color: pink;
-  margin-bottom: 30px;
-}
-
-.popup .description-popup {
-  font-size: 1.2em;
-  color: pink;
-  margin-bottom: 30px;
-}
-
-.popup .cta-button {
-  display: flex;
-  justify-content: center;
-}
-
-.popup .cta-button a {
-  width: 150px;
-  height: 45px;
-  background: pink;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 500;
-  border-radius: 6px;
-  margin: 0 10px;
-}
-
-.popup .cta-button a:hover {
-  background: #162938;
+.redes a:hover::before {
+    width: 100%;
 }
